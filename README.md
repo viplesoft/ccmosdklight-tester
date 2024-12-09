@@ -13,7 +13,19 @@ CCMOSDK Light Version 사용법을 알아보자.
 implementation("io.github.viplesoft:ccmosdk-light:0.9.10")
 ```
 
-### 2. AndroidManifest 설정
+### 2. JitPack 설정
+- settings.gradle 파일내에 아래의 코드를 추가한다.
+```
+dependencyResolutionManagement {
+    ...
+    repositories {
+        ...
+        maven { url = uri("https://www.jitpack.io") }
+    }
+}
+```
+
+### 3. AndroidManifest 설정
 - 인터넷에 연결할 수 있는 권한이 필요합니다. 아래의 코드를 추가해주시고 이미 선언되어있다면 스킵하세요.
 ```
 <uses-permission android:name="android.permission.INTERNET" />
@@ -34,7 +46,7 @@ implementation("io.github.viplesoft:ccmosdk-light:0.9.10")
 </provider>
 ```
 
-### 3. file_paths.xml 설정
+### 4. file_paths.xml 설정
 - res/xml/file_paths.xml 파일을 생성하고 아래의 내용을 추가한다. 
 
 ```

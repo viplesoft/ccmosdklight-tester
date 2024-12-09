@@ -21,13 +21,6 @@ android {
     }
 
     buildTypes {
-        debug {
-            isMinifyEnabled = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
         release {
             isMinifyEnabled = true
             proguardFiles(
@@ -58,9 +51,6 @@ android {
 }
 
 dependencies {
-    //implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
-    //implementation(files("libs/ccmosdk-light-release.aar"))
-
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
     implementation("androidx.activity:activity-compose:1.9.3")
@@ -73,14 +63,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.material:material:1.12.0")
 
-    //implementation("androidx.media3:media3-exoplayer:1.2.0")       // for rtspclient player
-    //implementation("org.pytorch:pytorch_android_lite:1.10.0")
-    //implementation("org.pytorch:pytorch_android_torchvision_lite:1.10.0")
-    //implementation("com.journeyapps:zxing-android-embedded:4.3.0")  //qrcode
-    //implementation("com.github.chrisbanes:PhotoView:2.3.0")     // photo view lib
-
     implementation("io.github.viplesoft:ccmosdk-light:0.9.10")
-    //implementation("io.github.viplesoft:ccmosdk:0.9.5")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")

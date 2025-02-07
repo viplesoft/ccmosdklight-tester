@@ -36,11 +36,6 @@ dependencyResolutionManagement {
 ```
 android.enableJetifier=true
 ```
-<paths>
-    <external-path name="external" path="." />
-    <external-cache-path name="external_cache" path="." />
-</paths>
-```
 
 ## SDK 사용
 ### 1. SDK 초기화

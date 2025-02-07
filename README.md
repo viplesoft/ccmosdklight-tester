@@ -31,24 +31,10 @@ dependencyResolutionManagement {
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-- sdk내에서 갤러리에 접근하여 사진이나 동영상을 읽거나 쓰는 기능이 포함되어있어 FileProvider 설정이 필요합니다.
-  
-    application 요소내에 아래의 코드를 삽입합니다.
+### 4. gradle.properties 설정
+- 이전 Support Library를 사용하는 라이브러리와의 호환을 위해 아래의 코드를 파일에 추가해주세요
 ```
-<provider
-    android:name="androidx.core.content.FileProvider"
-    android:authorities="앱의 패키지명.fileprovider"
-    android:exported="false"
-    android:grantUriPermissions="true">
-    <meta-data
-        android:name="android.support.FILE_PROVIDER_PATHS"
-        android:resource="@xml/file_paths" />
-</provider>
-```
-
-### 4. file_paths.xml 설정
-- res/xml/file_paths.xml 파일을 생성하고 아래의 내용을 추가한다. 
-
+android.enableJetifier=true
 ```
 <paths>
     <external-path name="external" path="." />

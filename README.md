@@ -10,7 +10,7 @@ CCMOSDK Light Version 사용법을 알아보자.
 ### 1. SDK 임포트
 - 앱수준의 build.gradle 의 dependencies 블럭내에 아래의 코드를 추가한다.
 ```
-implementation("io.github.viplesoft:ccmosdk-light:0.9.10")
+implementation("io.github.viplesoft:ccmosdk-light:0.9.21")
 ```
 
 ### 2. JitPack 설정
